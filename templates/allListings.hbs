@@ -1,0 +1,18 @@
+{{> navbar}}
+
+<div id="car-listings">
+    <h1>Car Listings</h1>
+
+    <div id="listings">
+        {{#each listings}}
+            {{> listing}}
+        {{/each}}
+
+        {{#if noListings}}
+        <p class="no-cars">No cars in database.</p>
+        {{/if}}
+
+    </div>
+</div>
+
+{{> footer}}
