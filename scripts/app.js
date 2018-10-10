@@ -15,6 +15,19 @@ $(()=>{
             })
         });
 
+        this.get('',function (ctx) {
+            ctx.isAuth = auth.isAuth()
+            if(auth.isAuth()){
+                ctx.username = sessionStorage.getItem('username')
+            }
+            ctx.loadPartials({
+                navbar: './templates/common/navbar.hbs',
+                footer: './templates/common/footer.hbs'
+            }).then(function () {
+                this.partial('./templates/main.hbs')
+            })
+        });
+
         this.get('#/main',function (ctx) {
             ctx.isAuth = auth.isAuth()
             if(auth.isAuth()){
