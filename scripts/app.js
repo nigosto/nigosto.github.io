@@ -15,7 +15,7 @@ $(()=>{
             })
         });
 
-        /*this.get('',function (ctx) {
+        this.get('#',function (ctx) {
             ctx.isAuth = auth.isAuth()
             if(auth.isAuth()){
                 ctx.username = sessionStorage.getItem('username')
@@ -26,7 +26,7 @@ $(()=>{
             }).then(function () {
                 this.partial('./templates/main.hbs')
             })
-        });*/
+        });
 
         this.get('#/main',function (ctx) {
             ctx.isAuth = auth.isAuth()
