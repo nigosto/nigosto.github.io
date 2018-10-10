@@ -1,4 +1,8 @@
 $(()=>{
+    if(!window.location.href.includes("/index.html"))
+    {
+        window.location.href+="index.html";
+    }
     const app = Sammy('#container', function () {
         this.use('Handlebars', 'hbs');
 
